@@ -7,19 +7,39 @@
 </head>
 <body>
 <div class="container">
-	<h1>인덱스 페이지 입니다</h1>
-	<ul>
-		<!-- 상대경로 이동 -->
-		<li><a href="hello.html">hello 페이지</a></li>
-		<!-- 절대경로 이동 -->
-		<li><a href="/Step01_Servlet/hello.html">hello 페이지</a></li>
-		<li><a href="sub/play.html">놀러가기</a></li>
-		<li><a href="hello">hello 페이지</a></li>
-	</ul>
+   <h1>인덱스 페이지 입니다</h1>
+   <ul>
+      <!-- 상대경로 이동 -->
+      <li><a href="hello.html">hello 페이지</a></li>
+      <!-- 절대경로 이동 -->
+      <li><a href="/Step01_Servlet/hello.html">hello 페이지</a></li>
+      <li><a href="sub/play.html">놀러가기</a></li>
+      <li><a href="hello">hello 페이지</a></li>
+      <li><a href="fortune">오늘의 운세</a></li>
+      <li><a href="friend/list">친구 목록 보기</a></li>
+      <li><a href="/Step01_Servlet/member/list">회원 목록 보기</a></li>
+      <li><a href="users/Loginform.html">로그인 페이지</a></li>
+   </ul>
+   <!-- 
+   		폼을 제출(submit) 하면(전송 버튼을 누르면)
+   		action="요청 경로"
+   		method="전송 방식"
+   		
+   		서버에 "요청경로" 대로 요청이 되고
+   		폼에 입력한 내용은 "전송방식" 으로 전송이 된다.
+    -->
+   <form action="send" method="get">
+   		<input type="text" name="msg" placeholder="서버에 할말 입력..."/>
+   		<button type="submit">전송</button>
+   </form>
+   <br>
+   <form action="/Step01_Servlet/send" method="post">
+   		<input type="text" name="msg" placeholder="서버에 할말 입력..."/>
+   		<button type="submit">전송</button>
+   </form>
 </div>
 </body>
 </html>
-
 
 
 
